@@ -1,5 +1,5 @@
 import socket
-import sys
+# import sys
 
 
 # sys.path.append(r"C:\Program Files\Python 3.5\lib\site-packages")
@@ -32,7 +32,7 @@ def ip_exists(ip):
         if result == 0:
             print("raspberry pi exists at ip_address: ", ip)
         else:
-            print("ip_address " + ip + "does not exist")
+            print("ip_address " + ip + " is not raspberry pi")
         socket_obj.close()
 
     except:
