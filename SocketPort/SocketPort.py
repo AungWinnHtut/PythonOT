@@ -30,9 +30,9 @@ def ip_exists(ip):
         socket.setdefaulttimeout(1)
         result = socket_obj.connect_ex((ip, 22))
         if result == 0:
-            print("ip exists")
+            print("raspberry pi exists at ip_address: ", ip)
         else:
-            print("no address")
+            print("ip_address " + ip + "does not exist")
         socket_obj.close()
 
     except:
@@ -41,6 +41,11 @@ def ip_exists(ip):
 
 print(get_ip())
 find_name_ip()
-ip_exists('192.168.0.101')
+
+for x in range(1, 255):
+    ipp = str(x)
+    ip_exists('192.168.0.'+ipp)
+
+
 
 
